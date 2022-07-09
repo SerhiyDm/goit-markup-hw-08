@@ -1,0 +1,9 @@
+.card-list {
+  @extend %list;
+  @include pre-tablet {
+    justify-content: center;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}

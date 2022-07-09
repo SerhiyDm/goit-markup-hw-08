@@ -1,0 +1,19 @@
+.social-link {
+  @include social-link();
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  &:focus,
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}
+.social-link__icon--gray {
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+  fill: #afb1b8;
+  .social-link:focus &,
+  .social-link:hover & {
+    fill: #ffffff;
+  }
+}
+.social-link__icon--white {
+  fill: #ffffff;
+}

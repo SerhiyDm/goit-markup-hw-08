@@ -1,0 +1,11 @@
+.page-navigation__menu {
+  @extend %list;
+  display: flex;
+  .page-navigation__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .page-navigation__link {
+    display: block;
+    text-decoration: none;
+  }
+}

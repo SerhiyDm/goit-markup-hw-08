@@ -1,0 +1,9 @@
+.logo {
+  @include logo();
+}
+.logo__chengeble--black {
+  @include logo($cl: #000000);
+}
+.logo__chengeble--white {
+  @include logo($cl: #ffffff);
+}

@@ -1,0 +1,24 @@
+.profile {
+  @include pre-desktop {
+    display: none;
+  }
+  padding-top: 0px;
+  .profile__title {
+    @include section-title();
+  }
+  .profile__item {
+    width: 370px;
+    position: relative;
+  }
+  .profile__image-overlay {
+    @include description-title(#ffffff);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+}

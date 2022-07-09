@@ -1,0 +1,8 @@
+.section {
+  @include pre-desktop {
+    margin-bottom: 60px;
+  }
+  @include desktop {
+    padding: 94px 0;
+  }
+}

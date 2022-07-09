@@ -1,0 +1,15 @@
+.filter-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  @include post-tablet {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  margin: -4px;
+  .filter-list__item {
+    margin: 4px;
+  }
+}

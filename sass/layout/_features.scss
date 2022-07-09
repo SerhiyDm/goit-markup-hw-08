@@ -1,0 +1,33 @@
+.features__item {
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 3 * 30px) / 4);
+  }
+}
+.features__description-title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  @include description-title(var(--title-color));
+  @include pre-tablet {
+    text-align: center;
+  }
+}
+.features__description-text {
+  @include text(400, 14px, calc(24 / 14), 0.03em, var(--paragraph-color));
+}
+.features__background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  @include post-mobile {
+    min-height: 120px;
+  }
+}
+.features__icon {
+  width: 70px;
+  height: 70px;
+}

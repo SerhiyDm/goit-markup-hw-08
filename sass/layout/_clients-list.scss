@@ -1,0 +1,16 @@
+.clients__title {
+  @include section-title();
+}
+
+.clients__item {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @include tablet {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+  @include desktop {
+    width: calc((100% - 5 * 30px) / 6);
+  }
+  width: 100%;
+}

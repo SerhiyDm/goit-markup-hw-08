@@ -1,0 +1,12 @@
+body {
+  font-family: var(--main-font-family), var(--secondary-font-family), 'sans-serif';
+  background-color: var(--background-color);
+  color: var(--paragraph-color);
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+a:hover,
+a:focus {
+  color: var(--accent-color);
+}

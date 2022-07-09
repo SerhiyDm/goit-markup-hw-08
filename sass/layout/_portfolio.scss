@@ -1,0 +1,23 @@
+.portfolio.section {
+  @include pre-desktop {
+    padding-top: 60px;
+  }
+}
+.portfolio__card-list {
+  margin-top: 40px;
+  @include tablet {
+    margin-top: 30px;
+  }
+  @include desktop {
+    margin-top: 50px;
+  }
+}
+.portfolio__item {
+  display: flex;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+}

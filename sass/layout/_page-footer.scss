@@ -1,0 +1,116 @@
+.page-footer {
+  background-color: var(--second-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .page-footer__container {
+    display: flex;
+    align-items: baseline;
+    @include pre-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+  .page-footer__first-group {
+    @include desktop {
+      margin-right: 70px;
+    }
+  }
+  .page-footer__second-group {
+    @include desktop {
+      margin-right: auto;
+    }
+  }
+  .page-footer__logo {
+    margin-bottom: 20px;
+  }
+  .page-footer__title {
+    @include description-title(#ffffff);
+    margin-bottom: 20px;
+  }
+}
+
+.page-footer__social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.page-footer__icon {
+  fill: #ffffff;
+}
+.page-footer__subscription-fields-wrap {
+  @include desktop {
+    display: flex;
+  }
+}
+
+.page-footer__input-wrap {
+  position: relative;
+  @include pre-desktop {
+    margin-bottom: 20px;
+  }
+}
+.page-footer__subscription-label {
+  @include text(400, 16px, calc(20 / 16), 0.03em, rgba(255, 255, 255, 0.6));
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+  cursor: pointer;
+  .page-footer__subscription-field:not(:placeholder-shown) + & {
+    transform: translateY(-205%);
+  }
+}
+.page-footer__subscription-field {
+  @include border-background(rgba(255, 255, 255, 0.3));
+  @include pre-mobile {
+    width: 99vw;
+  }
+  @include desktop {
+    margin-right: 12px;
+    width: 358px;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    width: 450px;
+  }
+  min-height: 50px;
+  padding: 15px 16px;
+  transition: border-color var(--transition-duration) var(--transition-timing-function);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: #ffffff;
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+.page-footer__button-send {
+  min-height: 50px;
+  padding-right: 29px;
+  padding-left: 28px;
+}
+.page-footer__button-text {
+  margin-right: 10px;
+}
+@include pre-desktop {
+  .page-footer__first-group,
+  .page-footer__second-group,
+  .page-footer__third-group {
+    text-align: center;
+  }
+}
+
+@include pre-tablet {
+  .page-footer__social-links-list,
+  .address-list {
+    margin-bottom: 60px;
+  }
+}
+@include tablet {
+  .page-footer__container {
+    justify-content: space-around;
+  }
+  .page-footer__third-group {
+    margin-top: 60px;
+  }
+}

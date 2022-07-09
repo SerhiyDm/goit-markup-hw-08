@@ -1,0 +1,130 @@
+@mixin text($fw, $fsz, $lh, $lsp, $cl) {
+  font-weight: $fw;
+  font-size: $fsz;
+  line-height: $lh;
+  letter-spacing: $lsp;
+  color: $cl;
+}
+@mixin section-title() {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: calc(33 / 28);
+    letter-spacing: 0.03em;
+  }
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  text-align: center;
+}
+@mixin logo($dsp: inline-block, $cl: var(--accent-color)) {
+  display: $dsp;
+  flex-shrink: 0;
+  text-decoration: none;
+  font-family: var(--secondary-font-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  color: $cl;
+  @media screen and (max-width: 1199px) {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.03em;
+  }
+}
+@mixin header-link($cl) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: $cl;
+}
+@mixin address-link($cl) {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: $cl;
+  text-decoration: none;
+}
+@mixin description-title($cl) {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $cl;
+}
+@mixin button($dsp: inline-flex, $bgcl) {
+  display: $dsp;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: background-color var(--transition-duration) var(--transition-timing-function);
+  cursor: var(--cursor);
+  background-color: $bgcl;
+}
+@mixin border-background($bcl) {
+  border: 1px solid $bcl;
+  border-radius: 4px;
+  background-color: transparent;
+}
+@mixin social-link() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+@mixin pre-mobile {
+  @media screen and (max-width: 479px) {
+    @content;
+  }
+}
+@mixin post-mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin pre-tablet {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin post-tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin pre-desktop {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

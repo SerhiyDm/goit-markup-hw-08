@@ -1,0 +1,43 @@
+.modal {
+  transition: transform 500ms cubic-bezier(1, -1.01, 0.23, -0.46) 250ms;
+  transform: translate(-50%, -50%) rotate(0) scale(1) skew(0);
+  position: absolute;
+  @include pre-mobile {
+    overflow-y: scroll;
+  }
+  top: 50%;
+  left: 50%;
+
+  padding: 15px;
+  width: 95vw;
+  height: auto;
+  @include post-mobile {
+    width: 450px;
+    padding: 40px;
+  }
+  @include desktop {
+    width: 528px;
+  }
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: #ffffff;
+  .modal__title {
+    margin-bottom: 12px;
+    @include text(700, 20px, calc(23 / 20), 0.03em, var(--title-color));
+    text-align: center;
+  }
+  .modal__button-close {
+    @include pre-mobile {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+    }
+    @include post-mobile {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+  }
+}

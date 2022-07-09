@@ -1,0 +1,104 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  z-index: 15;
+  background-color: #ffffff;
+
+  transform: translateX(101%);
+  transition: transform var(--transition-duration) var(--transition-timing-function);
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-toggle {
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  @include post-tablet {
+    display: none;
+  }
+}
+.menu-container__menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.menu-icon-cross,
+.menu-icon-burger {
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+}
+.menu-toggle:hover .menu-icon-cross,
+.menu-toggle:hover .menu-icon-burger,
+.menu-toggle:focus .menu-icon-cross,
+.menu-toggle:focus .menu-icon-burger {
+  fill: var(--accent-color);
+}
+.mobile-menu {
+  @extend %list;
+}
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+a.mobile-menu__link {
+  transition: color var(--transition-duration) var(--transition-timing-function);
+  @include pre-mobile {
+    @include text(500, 26px, calc(38 / 26), 0.02em, var(--title-color));
+  }
+  @include text(500, 40px, calc(47 / 40), 0.02em, var(--title-color));
+
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.mobile-menu--navigation {
+  @include pre-mobile {
+    margin-bottom: 60px;
+  }
+  margin-bottom: 302px;
+  .mobile-menu__link--current {
+    color: var(--accent-color);
+  }
+}
+
+.mobile-menu--contacts {
+  margin-bottom: 64px;
+  .mobile-menu__link--tel {
+    @include pre-mobile {
+      @include text(500, 24px, calc(34 / 24), 0.02em, var(--accent-color));
+    }
+    @include text(500, 34px, calc(40 / 34), 0.02em, var(--accent-color));
+  }
+  .mobile-menu__link--mail {
+    @include text(500, 24px, calc(28 / 24), 0.02em, var(--paragraph-color));
+  }
+}
+.mobile-menu--social {
+  display: flex;
+  @include pre-mobile {
+    flex-wrap: wrap;
+    margin: -10px -5px;
+    .mobile-menu--social__item {
+      margin: 10px 5px;
+    }
+  }
+  @include mobile {
+    .mobile-menu--social__item:not(:first-child) {
+      border-left: 1px solid rgba(33, 33, 33, 0.2);
+    }
+  }
+  .mobile-menu--social__link {
+    padding: 0 10px;
+    @include text(500, 18px, calc(22 / 18), 0.02em, var(--accent-color));
+    text-decoration: none;
+  }
+}
