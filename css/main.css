@@ -102,7 +102,6 @@ a:focus {
 
 .logo {
   display: inline-block;
-  flex-shrink: 0;
   text-decoration: none;
   font-family: var(--secondary-font-family);
   font-weight: 700;
@@ -122,7 +121,6 @@ a:focus {
 
 .logo__chengeble--black {
   display: inline-block;
-  flex-shrink: 0;
   text-decoration: none;
   font-family: var(--secondary-font-family);
   font-weight: 700;
@@ -142,7 +140,6 @@ a:focus {
 
 .logo__chengeble--white {
   display: inline-block;
-  flex-shrink: 0;
   text-decoration: none;
   font-family: var(--secondary-font-family);
   font-weight: 700;
@@ -559,7 +556,7 @@ a:focus {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 15px;
+  padding: 20px 15px;
   width: 95vw;
   height: auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -583,7 +580,7 @@ a:focus {
   }
 }
 .modal .modal__title {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -591,11 +588,16 @@ a:focus {
   color: var(--title-color);
   text-align: center;
 }
+@media screen and (min-width: 480px) {
+  .modal .modal__title {
+    margin-bottom: 12px;
+  }
+}
 @media screen and (max-width: 479px) {
   .modal .modal__button-close {
     position: absolute;
-    top: 4px;
-    right: 4px;
+    top: 2px;
+    right: 2px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -691,11 +693,20 @@ a:focus {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 48px 40px;
   z-index: 15;
   background-color: #ffffff;
-  transform: translateX(101%);
+  transform: translateX(100%);
   transition: transform var(--transition-duration) var(--transition-timing-function);
+}
+
+.limiter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  max-width: 480px;
+  height: 100%;
+  padding: 48px 55px 48px 40px;
 }
 
 .menu-container.is-open {
@@ -762,12 +773,7 @@ a.mobile-menu__link:hover, a.mobile-menu__link:focus {
 }
 
 .mobile-menu--navigation {
-  margin-bottom: 302px;
-}
-@media screen and (max-width: 479px) {
-  .mobile-menu--navigation {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 }
 .mobile-menu--navigation .mobile-menu__link--current {
   color: var(--accent-color);
@@ -832,6 +838,7 @@ a.mobile-menu__link:hover, a.mobile-menu__link:focus {
   background-color: var(--background-color);
 }
 .page-header__container {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -1099,44 +1106,77 @@ a.mobile-menu__link:hover, a.mobile-menu__link:focus {
     margin-top: 60px;
   }
 }
-.hero.section {
+.hero {
   max-width: 1600px;
   background-color: var(--second-background-color);
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url(".././images/overlay.jpg");
+  background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrMb.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-@media screen and (min-width: 1200px) {
-  .hero.section {
-    padding: 0;
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrMb@2x.jpg");
   }
 }
-.hero.section .hero__body {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrTb.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrTb@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrDsk.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrDsk@2.jpg");
+  }
+}
+.hero .hero__body {
+  display: flex;
+  justify-content: center;
+  padding: 60px 15px;
+}
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .hero .hero__body {
+    padding: 118px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero .hero__body {
+    padding: 200px 0;
+  }
+}
+.hero .hero__content-container {
   text-align: center;
 }
-@media screen and (max-width: 1199px) {
-  .hero.section .hero__body {
-    padding-top: 118px;
-    padding-bottom: 118px;
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .hero .hero__content-container {
+    width: 360px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero.section .hero__body {
-    padding-top: 200px;
-    padding-bottom: 200px;
+  .hero .hero__content-container {
+    width: 696px;
   }
 }
-.hero.section .hero__title {
+.hero .hero__title {
   display: block;
   margin-bottom: 30px;
   font-style: normal;
   text-transform: uppercase;
 }
 @media screen and (max-width: 1199px) {
-  .hero.section .hero__title {
+  .hero .hero__title {
     font-weight: 900;
     font-size: 26px;
     line-height: 1.6153846154;
@@ -1145,7 +1185,7 @@ a.mobile-menu__link:hover, a.mobile-menu__link:focus {
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero.section .hero__title {
+  .hero .hero__title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.3636363636;
@@ -1164,6 +1204,12 @@ a.mobile-menu__link:hover, a.mobile-menu__link:focus {
 }
 .button-send.hero__open-button:active {
   box-shadow: inset -1px -2px 1px rgba(31, 37, 39, 0.945), inset 1px 2px 1px rgba(31, 37, 39, 0.945), inset -1px 2px 1px rgba(31, 37, 39, 0.945), inset 1px -2px 1px rgba(31, 37, 39, 0.945);
+}
+
+@media screen and (max-width: 1199px) {
+  .features.section {
+    padding-top: 60px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {

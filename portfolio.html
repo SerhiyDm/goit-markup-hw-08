@@ -53,52 +53,57 @@
             </button>
         </div>
     </header>
-    <div class="menu-container js-menu-container" id="mobile-menu">
-        <button class="menu-toggle js-close-menu menu-container__menu-toggle">
-            <svg class="menu-icon-cross" width="40" height="40" aria-label="закрыть мобильное меню">
-                <use class="icon-close" href="./images/icons.svg#icon-close_40px">
-                </use>
-            </svg>
-        </button>
-    
-        <ul class="mobile-menu mobile-menu--navigation">
-            <li class="mobile-menu__item">
-                <a class="mobile-menu__link" href="./index.html">Студия</a>
-            </li>
-            <li class="mobile-menu__item">
-                <a class="mobile-menu__link mobile-menu__link--current" href="">Портфолио</a>
-            </li>
-            <li class="mobile-menu__item">
-                <a class="mobile-menu__link" href="">Контакты</a>
-            </li>
-        </ul>
-    
-    
-        <ul class="mobile-menu mobile-menu--contacts">
-            <li class="mobile-menu__item">
-                <a class="mobile-menu__link mobile-menu__link--tel" href="tel:+380961111111">+38 096 111 11 11</a>
-            </li>
-            <li class="mobile-menu__item">
-                <a class="mobile-menu__link mobile-menu__link--mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-            </li>
-        </ul>
-    
-    
-        <ul class="mobile-menu mobile-menu--social">
-            <li class="mobile-menu--social__item">
-                <a class="mobile-menu--social__link" href="">Instagram</a>
-            </li>
-            <li class="mobile-menu--social__item">
-                <a class="mobile-menu--social__link" href="">Twitter</a>
-            </li>
-            <li class="mobile-menu--social__item">
-                <a class="mobile-menu--social__link" href="">Facebook</a>
-            </li>
-            <li class="mobile-menu--social__item">
-                <a class="mobile-menu--social__link" href="">Linkedin</a>
-            </li>
-        </ul>
-    </div>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <div class="limiter">
+                <button class="menu-toggle js-close-menu menu-container__menu-toggle">
+                    <svg class="menu-icon-cross" width="40" height="40" aria-label="закрыть мобильное меню">
+                        <use class="icon-close" href="./images/icons.svg#icon-close_40px">
+                        </use>
+                    </svg>
+                </button>
+                <div class="mobile-menu__top-block">
+                    <ul class="mobile-menu mobile-menu--navigation">
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link mobile-menu__link--current" href="">Студия</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+        
+                <div class="mobile-menu__bottom-block">
+                    <ul class="mobile-menu mobile-menu--contacts">
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link mobile-menu__link--tel" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="mobile-menu__link mobile-menu__link--mail"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+        
+        
+                    <ul class="mobile-menu mobile-menu--social">
+                        <li class="mobile-menu--social__item">
+                            <a class="mobile-menu--social__link" href="">Instagram</a>
+                        </li>
+                        <li class="mobile-menu--social__item">
+                            <a class="mobile-menu--social__link" href="">Twitter</a>
+                        </li>
+                        <li class="mobile-menu--social__item">
+                            <a class="mobile-menu--social__link" href="">Facebook</a>
+                        </li>
+                        <li class="mobile-menu--social__item">
+                            <a class="mobile-menu--social__link" href="">Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     <main>
         <section class="portfolio section">
             <div class="portfolio__body container">
@@ -130,7 +135,13 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                    это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj1.jpg" alt="фото сотрудников на экране макбука" width="370"/>
+                            <picture>
+                                       <source srcset="./images/imgPrj1Dsk.jpg 1x, ./images/imgPrj1Dsk@2.jpg 2x" media="(min-width: 1200px)"/>
+                                <source srcset="./images/imgPrj1Tb.jpg 1x, ./images/imgPrj1Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/imgPrj1Mb.jpg 1x, ./images/imgPrj1Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                                <img src="./images/imgPrj1Mb.jpg" alt="фото сотрудников на экране макбука" width="450" height="294" />
+                            </picture>
+                            
                     </div>
                     <div class="card-link__description-field"><h2 class="card-link__title">Технокряк</h2>
                     <p class="card-link__title--second">Вебсайт</p></div>
@@ -143,7 +154,12 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                    это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj2.jpg" alt="игра в баскетболл" width="370"/>
+                            <picture>
+                                <source srcset="./images/imgPrj2Dsk.jpg 1x, ./images/imgPrj2Dsk@2x.jpg 2x" media="(min-width: 1200px)" />
+                                <source srcset="./images/imgPrj2Tb.jpg 1x, ./images/imgPrj2Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                                <source srcset="./images/imgPrj2Mb.jpg 1x, ./images/imgPrj2Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                                <img src="./images/imgPrj2Mb.jpg" alt="игра в баскетболл" width="450" height="294"/>
+                            </picture>
                     </div>
                     <div class="card-link__description-field"><h2 lang="en" class="card-link__title">Постер New Orlean vs Golden Star</h2>
                     <p class="card-link__title--second">Дизайн</p></div>
@@ -156,7 +172,12 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                    это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj3.jpg" alt="логотип рыбного ресторана" width="370"/>
+                        <picture>
+                               <source srcset="./images/imgPrj3Dsk.jpg 1x, ./images/imgPrj3Dsk@2x.jpg 2x" media="(min-width: 1200px)" />
+                               <source srcset="./images/imgPrj3Tb.jpg 1x, ./images/imgPrj3Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                               <source srcset="./images/imgPrj3Mb.jpg 1x, ./images/imgPrj3Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                               <img src="./images/imgPrj3Mb.jpg" alt="логотип рыбного ресторана" width="450" height="294"/>
+                      </picture>
                         </div>
                    <div class="card-link__description-field"><h2 class="card-link__title">Ресторан <span lang="en">Seafood</span>
                 </h2>
@@ -170,7 +191,12 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                     это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj4.jpg" alt="безпроводные наушники" width="370"/>
+                            <picture>
+                                    <source srcset="./images/imgPrj4Dsk.jpg 1x, ./images/imgPrj4Dsk@2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <source srcset="./images/imgPrj4Tb.jpg 1x, ./images/imgPrj4Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/imgPrj4Mb.jpg 1x, ./images/imgPrj4Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                                    <img src="./images/imgPrj4Mb.jpg" alt="безпроводные наушники" width="450" height="294"/>
+                            </picture>
                         </div>
                     <div class="card-link__description-field"><h2 class="card-link__title">Проект <span lang="en">Prime</span>
                     </h2>
@@ -184,7 +210,12 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                    это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj5.jpg" alt="две коробки" width="370"/>
+                            <picture>
+                                    <source srcset="./images/imgPrj5Dsk.jpg 1x, ./images/imgPrj5Dsk@2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <source srcset="./images/imgPrj5Tb.jpg 1x, ./images/imgPrj5Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/imgPrj5Mb.jpg 1x, ./images/imgPrj5Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                                    <img src="./images/imgPrj5Mb.jpg" alt="две коробки" width="450" height="294"/>
+                            </picture>
                         </div>
                     <div class="card-link__description-field"><h2 class="card-link__title">Проект <span lang="en">Boxes</span>
                     </h2>
@@ -198,7 +229,12 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                     это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj6.jpg" alt="монитор" width="370"/>
+                            <picture>
+                                    <source srcset="./images/imgPrj6Dsk.jpg 1x, ./images/imgPrj6Dsk@2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <source srcset="./images/imgPrj6Tb.jpg 1x, ./images/imgPrj6Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/imgPrj6Mb.jpg 1x, ./images/imgPrj6Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                                    <img src="./images/imgPrj6Mb.jpg" alt="монитор" width="450" height="294"/>
+                            </picture>
                         </div>
                     <div class="card-link__description-field"><h2 lang="en" class="card-link__title">Inspiration has no Borders</h2>
                     <p class="card-link__title--second">Вебсайт</p></div>
@@ -211,7 +247,12 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                     это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj7.jpg" alt="открытый журнал" width="370"/>
+                            <picture>
+                                    <source srcset="./images/imgPrj7Dsk.jpg 1x, ./images/imgPrj7Dsk@2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <source srcset="./images/imgPrj7Tb.jpg 1x, ./images/imgPrj7Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/imgPrj7Mb.jpg 1x, ./images/imgPrj7Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                                    <img src="./images/imgPrj7Mb.jpg" alt="открытый журнал" width="450" height="294"/>
+                            </picture>
                         </div>
                     <div class="card-link__description-field"><h2 class="card-link__title">Издание<span lang="en">Limited Edition</span>
                     </h2>
@@ -225,7 +266,12 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                     это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj8.jpg" alt="этикетка с логотипом" width="370"/>
+                            <picture>
+                                    <source srcset="./images/imgPrj8Dsk.jpg 1x, ./images/imgPrj8Dsk@2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <source srcset="./images/imgPrj8Tb.jpg 1x, ./images/imgPrj8Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/imgPrj8Mb.jpg 1x, ./images/imgPrj8Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                                    <img src="./images/imgPrj8Mb.jpg" alt="этикетка с логотипом" width="450" height="294"/>
+                            </picture>
                         </div>
                     <div class="card-link__description-field"><h2 class="card-link__title">Проект <span lang="en">LAB</span>
                     </h2>
@@ -239,7 +285,12 @@
                                 <p>Ресурс предлагает комплексные<br />предложения с разным уровнем<br />функционала и сервисов. Все
                                     это<br />позволит посетителю получить<br />исчерпывающие сведения<br />о компании или частном лице.</p>
                             </div>
-                            <img src="./images/proj9.jpg" alt="руки на клавиатуре лэптопа" width="370"/>
+                            <picture>
+                                    <source srcset="./images/imgPrj9Dsk.jpg 1x, ./images/imgPrj9Dsk@2x.jpg 2x" media="(min-width: 1200px)" />
+                                    <source srcset="./images/imgPrj9Tb.jpg 1x, ./images/imgPrj9Tb@2x.jpg 2x" media="(min-width: 768px)" />
+                                    <source srcset="./images/imgPrj9Mb.jpg 1x, ./images/imgPrj9Mb@2x.jpg 2x" media="(min-width: 480px)" />
+                                    <img src="./images/imgPrj9Mb.jpg" alt="руки на клавиатуре лэптопа" width="450" height="294"/>
+                        </picture>
                         </div>
                     <div class="card-link__description-field"><h2 lang="en" class="card-link__title">Growing Business</h2>
                     <p class="card-link__title--second">Приложение</p></div>

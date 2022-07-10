@@ -24,7 +24,6 @@
 }
 @mixin logo($dsp: inline-block, $cl: var(--accent-color)) {
   display: $dsp;
-  flex-shrink: 0;
   text-decoration: none;
   font-family: var(--secondary-font-family);
   font-weight: 700;
@@ -125,6 +124,11 @@
 }
 @mixin desktop {
   @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin retina {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     @content;
   }
 }

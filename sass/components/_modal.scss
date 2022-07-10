@@ -8,7 +8,7 @@
   top: 50%;
   left: 50%;
 
-  padding: 15px;
+  padding: 20px 15px;
   width: 95vw;
   height: auto;
   @include post-mobile {
@@ -24,15 +24,18 @@
   border-radius: 4px;
   background-color: #ffffff;
   .modal__title {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    @include post-mobile {
+      margin-bottom: 12px;
+    }
     @include text(700, 20px, calc(23 / 20), 0.03em, var(--title-color));
     text-align: center;
   }
   .modal__button-close {
     @include pre-mobile {
       position: absolute;
-      top: 4px;
-      right: 4px;
+      top: 2px;
+      right: 2px;
     }
     @include post-mobile {
       position: absolute;

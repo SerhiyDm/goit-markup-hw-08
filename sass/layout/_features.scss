@@ -1,3 +1,8 @@
+.features.section {
+  @include pre-desktop {
+    padding-top: 60px;
+  }
+}
 .features__item {
   @include tablet {
     width: calc((100% - 30px) / 2);
