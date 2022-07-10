@@ -2,15 +2,16 @@
   transition: transform 500ms cubic-bezier(1, -1.01, 0.23, -0.46) 250ms;
   transform: translate(-50%, -50%) rotate(0) scale(1) skew(0);
   position: absolute;
-  @include pre-mobile {
-    overflow-y: scroll;
-  }
   top: 50%;
   left: 50%;
 
   padding: 20px 15px;
-  width: 95vw;
   height: auto;
+  @include pre-tablet {
+    width: 95vw;
+    height: 95vh;
+  }
+  overflow-y: auto;
   @include post-mobile {
     width: 450px;
     padding: 40px;
