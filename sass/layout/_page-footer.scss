@@ -65,7 +65,7 @@
 .page-footer__subscription-field {
   @include border-background(rgba(255, 255, 255, 0.3));
   @include pre-mobile {
-    width: 99vw;
+    width: 90vw;
   }
   @include desktop {
     margin-right: 12px;

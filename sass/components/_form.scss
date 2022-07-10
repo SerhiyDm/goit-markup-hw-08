@@ -47,9 +47,6 @@
   }
 }
 .form__button {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,4 +54,9 @@
   &__button:active {
     box-shadow: unset;
   }
+}
+.form__button-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }

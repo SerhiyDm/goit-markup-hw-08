@@ -41,10 +41,10 @@
   }
   .hero__content-container {
     @media screen and (min-width: 480px) and (max-width: 1199px) {
-      width: 360px;
+      max-width: 360px;
     }
     @include desktop {
-      width: 696px;
+      max-width: 696px;
     }
     text-align: center;
   }

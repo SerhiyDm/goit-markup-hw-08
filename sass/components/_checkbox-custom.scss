@@ -2,10 +2,7 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 15px;
-  @include post-mobile {
-    margin-bottom: 30px;
-  }
+  margin-bottom: 30px;
   @include pre-desktop {
     @include text(400, 12px, calc(14 / 12), 0.03em, #757575);
   }

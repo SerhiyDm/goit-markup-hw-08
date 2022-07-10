@@ -4,20 +4,19 @@
   position: absolute;
   top: 50%;
   left: 50%;
-
+  z-index: 5;
   padding: 20px 15px;
-  height: auto;
-  @include pre-tablet {
-    width: 95vw;
-    height: 95vh;
-  }
+  height: 90vh;
+  width: 90vw;
   overflow-y: auto;
   @include post-mobile {
-    width: 450px;
+    height: 75vh;
+    max-width: 450px;
     padding: 40px;
   }
   @include desktop {
-    width: 528px;
+    height: auto;
+    max-width: 528px;
   }
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -32,6 +31,7 @@
     @include text(700, 20px, calc(23 / 20), 0.03em, var(--title-color));
     text-align: center;
   }
+
   .modal__button-close {
     @include pre-mobile {
       position: absolute;
