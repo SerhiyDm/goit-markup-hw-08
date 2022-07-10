@@ -14,8 +14,10 @@
     max-width: 450px;
     padding: 40px;
   }
-  @include desktop {
+  @include post-tablet {
     height: auto;
+  }
+  @include desktop {
     max-width: 528px;
   }
 
