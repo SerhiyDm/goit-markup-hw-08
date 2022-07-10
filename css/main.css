@@ -1111,34 +1111,34 @@ a.mobile-menu__link:hover, a.mobile-menu__link:focus {
   background-color: var(--second-background-color);
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrMb.jpg");
+  background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url(".././images/imgOvrMb.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrMb@2x.jpg");
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url(".././images/imgOvrMb@2x.jpg");
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
-    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrTb.jpg");
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url(".././images/imgOvrTb.jpg");
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrTb@2x.jpg");
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url(".././images/imgOvrTb@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrDsk.jpg");
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url(".././images/imgOvrDsk.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url("../../images/imgOvrDsk@2.jpg");
+    background-image: linear-gradient(30deg, rgba(47, 48, 58, 0.8), rgba(0, 0, 0, 0.1)), url(".././images/imgOvrDsk@2.jpg");
   }
 }
 .hero .hero__body {
