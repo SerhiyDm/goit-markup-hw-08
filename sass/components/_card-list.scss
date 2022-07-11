@@ -1,9 +1,13 @@
 .card-list {
   @extend %list;
-  @include pre-tablet {
-    justify-content: center;
+  .card-list__item:not(:last-child) {
+    @include pre-tablet {
+      margin-bottom: 30px;
+    }
   }
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include post-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }

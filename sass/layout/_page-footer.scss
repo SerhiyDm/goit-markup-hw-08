@@ -3,24 +3,35 @@
   padding-top: 60px;
   padding-bottom: 60px;
   .page-footer__container {
-    display: flex;
-    align-items: baseline;
-    @include pre-tablet {
-      flex-direction: column;
-      align-items: center;
-    }
-    @include tablet {
-      flex-wrap: wrap;
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
     }
   }
   .page-footer__first-group {
-    @include desktop {
-      margin-right: 70px;
+    @include pre-desktop {
+      margin-bottom: 60px;
+    }
+    @include post-tablet {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
     }
   }
   .page-footer__second-group {
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .page-footer__logo-address-container {
+    @include pre-tablet {
+      margin-bottom: 60px;
+    }
     @include desktop {
-      margin-right: auto;
+      margin-right: 70px;
     }
   }
   .page-footer__logo {
@@ -93,24 +104,9 @@
   margin-right: 10px;
 }
 @include pre-desktop {
-  .page-footer__first-group,
+  .page-footer__logo-address-container,
   .page-footer__second-group,
-  .page-footer__third-group {
+  .page-footer__social-link-container {
     text-align: center;
-  }
-}
-
-@include pre-tablet {
-  .page-footer__social-links-list,
-  .address-list {
-    margin-bottom: 60px;
-  }
-}
-@include tablet {
-  .page-footer__container {
-    justify-content: space-around;
-  }
-  .page-footer__third-group {
-    margin-top: 60px;
   }
 }

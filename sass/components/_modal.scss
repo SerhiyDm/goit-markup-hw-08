@@ -6,16 +6,15 @@
   left: 50%;
   z-index: 5;
   padding: 20px 15px;
-  height: 95vh;
+  height: auto;
+  max-height: 75vh;
   width: 90vw;
   overflow-y: auto;
   @include post-mobile {
-    height: 75vh;
     max-width: 450px;
     padding: 40px;
   }
   @include post-tablet {
-    height: auto;
   }
   @include desktop {
     max-width: 528px;

@@ -1,8 +1,14 @@
 .clients__title {
   @include section-title();
 }
+.clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
 .clients__item {
+  width: 100%;
   @media screen and (min-width: 320px) and (max-width: 767px) {
     width: calc((100% - 30px) / 2);
   }
@@ -12,5 +18,4 @@
   @include desktop {
     width: calc((100% - 5 * 30px) / 6);
   }
-  width: 100%;
 }

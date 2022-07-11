@@ -4,6 +4,9 @@
   }
 }
 .portfolio__card-list {
+  @include pre-tablet {
+    display: block;
+  }
   margin-top: 40px;
   @include tablet {
     margin-top: 30px;

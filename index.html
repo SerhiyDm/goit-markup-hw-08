@@ -26,12 +26,12 @@
       </nav>
       <ul class="page-header__contacts-list">
         <li class="page-header__item ">
-          <a class="page-header__link page-header__link--second" href="mailto:info@devstudio.com">
+          <a class="page-header__link page-header__link--second link-mail" href="mailto:info@devstudio.com">
             <svg class="page-header__icon page-header__icon--envelope" width="16" height="12">
           <use href="./images/icons.svg#icon-envelope"></use>
         </svg>info@devstudio.com</a></li>
         <li class="page-header__item item">
-          <a class="page-header__link page-header__link--second" href="tel:+380961111111">
+          <a class="page-header__link page-header__link--second link-tel" href="tel:+380961111111">
             <svg class="page-header__icon page-header__icon--smartphone" width="10" height="16">
               <use href="./images/icons.svg#icon-smartphone"></use>
             </svg>+38 096 111 11 11</a></li>
@@ -337,17 +337,17 @@
         <div class="clients__body container">
         <h2 class="clients__title section-title" >Постоянные клиенты</h2>
         <ul class="card-list clients__list ">
-          <li class="card-list__item clients__item"><a href="" class="rectangle-transparent-link">
+          <li class=" clients__item"><a href="" class="rectangle-transparent-link">
             <svg class="rectangle-transparent-link__icon" width="106" height="60" ><use href="./images/icons.svg#icon-logo1"></use> </svg></a></li>
-          <li class="card-list__item clients__item"><a href="" class="rectangle-transparent-link">
+          <li class=" clients__item"><a href="" class="rectangle-transparent-link">
             <svg class="rectangle-transparent-link__icon" width="106" height="60" ><use href="./images/icons.svg#icon-Logo2"></use> </svg></a></li>
-          <li class="card-list__item clients__item"><a href="" class="rectangle-transparent-link">
+          <li class=" clients__item"><a href="" class="rectangle-transparent-link">
             <svg class="rectangle-transparent-link__icon" width="106" height="60" ><use href="./images/icons.svg#icon-Logo3"></use> </svg></a></li>
-          <li class="card-list__item clients__item"><a href="" class="rectangle-transparent-link">
+          <li class=" clients__item"><a href="" class="rectangle-transparent-link">
             <svg class="rectangle-transparent-link__icon" width="106" height="60" ><use href="./images/icons.svg#icon-Logo4"></use> </svg></a></li>
-          <li class="card-list__item clients__item"><a href="" class="rectangle-transparent-link">
+          <li class=" clients__item"><a href="" class="rectangle-transparent-link">
             <svg class="rectangle-transparent-link__icon" width="106" height="60" ><use href="./images/icons.svg#icon-Logo5"></use> </svg></a></li>
-          <li class="card-list__item clients__item"><a href="" class="rectangle-transparent-link">
+          <li class=" clients__item"><a href="" class="rectangle-transparent-link">
             <svg class="rectangle-transparent-link__icon" width="106" height="60" ><use href="./images/icons.svg#icon-Logo6"></use> </svg></a></li>
         </ul>
         </div>
@@ -355,7 +355,8 @@
     </main>
      <footer class="page-footer">
     <div class="container page-footer__container">
-        <div class="page-footer__first-group">
+      <div class="page-footer__first-group">
+        <div class="page-footer__logo-address-container">
       <a class="logo page-footer__logo" href="/">Web<span class="logo__chengeble--white">Studio</span>
       </a>
       <address>
@@ -367,7 +368,7 @@
       </address>
         
       </div>
-            <div class="page-footer__second-group">
+            <div class="page-footer__social-link-container">
                 <p class="page-footer__title">присоединяйтесь</p>
               <ul class="social-links-list page-footer__social-links-list">
                 <li class="social-links-list__item"><a href="" class="social-link page-footer__social-link" aria-label="instagram link">
@@ -392,7 +393,8 @@
                 </li>
               </ul>
       </div>
-<div class="page-footer__third-group">
+      </div>
+<div class="page-footer__second-group">
   <p class="page-footer__title">подпишитесь на рассылку</p>
   <form  class="page-footer__subscription-fields-wrap">
     <div class="page-footer__input-wrap">
@@ -414,6 +416,7 @@
         </button>
         <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="form">
+        <div class="form__wrap">
           <div class="form__field-container">
             <label class="form__label">
               <span class="form__label-title">Имя</span>
@@ -445,10 +448,11 @@
             </span>
             </label>
           </div>
-          <div class="form__field-comment">
+           <div class="form__field-comment">
             <label for="user-comment" class="form__label form__label--bottom">Комментарий</label>
             <textarea name="user-comment" id="user-comment" class="user-comment-text" placeholder="Введите текст"></textarea>
           </div>
+      
         
             <label class="checkbox-custom">
              <input type="checkbox" value="" class="visually-hidden"/>
@@ -457,6 +461,7 @@
             <div class="form__button-wrap">
             <button type="submit" class="button-send form__button" >Отправить</button>
             </div>
+          </div>
         </form>
       </div>
     </div> 

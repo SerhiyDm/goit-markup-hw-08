@@ -7,8 +7,8 @@
   .team__title {
     @include section-title();
   }
-
   .team__item {
+    width: 100%;
     @include tablet {
       width: calc((100% - 30px) / 2);
     }
