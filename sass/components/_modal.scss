@@ -5,13 +5,14 @@
   top: 50%;
   left: 50%;
   z-index: 5;
-  padding: 40px;
+  padding: 25px 10px;
   height: auto;
   max-height: 75vh;
   width: 90vw;
   overflow-y: auto;
   @include post-mobile {
     max-width: 450px;
+    padding: 40px;
   }
   @include post-tablet {
   }
