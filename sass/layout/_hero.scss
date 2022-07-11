@@ -1,5 +1,12 @@
 .hero {
   max-width: 1600px;
+  padding: 60px 15px;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    padding: 118px 0;
+  }
+  @include desktop {
+    padding: 200px 0;
+  }
   background-color: var(--second-background-color);
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -31,13 +38,6 @@
   .hero__body {
     display: flex;
     justify-content: center;
-    padding: 60px 15px;
-    @media screen and (min-width: 480px) and (max-width: 1199px) {
-      padding: 118px 0;
-    }
-    @include desktop {
-      padding: 200px 0;
-    }
   }
   .hero__content-container {
     @media screen and (min-width: 480px) and (max-width: 1199px) {
