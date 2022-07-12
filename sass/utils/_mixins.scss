@@ -85,7 +85,7 @@
   align-items: center;
 }
 @mixin pre-mobile {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 479.98px) {
     @content;
   }
 }
@@ -95,12 +95,12 @@
   }
 }
 @mixin mobile {
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (min-width: 480px) and (max-width: 767.98px) {
     @content;
   }
 }
 @mixin pre-tablet {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     @content;
   }
 }
@@ -110,12 +110,12 @@
   }
 }
 @mixin tablet {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     @content;
   }
 }
 @mixin pre-desktop {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1199.98px) {
     @content;
   }
 }
